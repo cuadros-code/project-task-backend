@@ -4,7 +4,7 @@ const connectDB = require('./config/db')
 const app = express()
 
 
-const PORT = process.env.PORT || 3001
+const port = process.env.PORT || 3001
 
 connectDB()
 
@@ -22,6 +22,6 @@ app.use('/api/project', require('./routes/projects'))
 
 app.use('/api/task', require('./routes/task'))
 
-app.listen(PORT, () => {
-    console.log('server on port ', PORT)
+app.listen(port, () => {
+    console.log('server on port ', port)
 })
